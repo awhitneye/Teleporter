@@ -5,7 +5,7 @@ var port = 3000;
 User.sync({ force: true })
   .then(function () {
     console.log('Users table created');
-    return User.create({ username: 'zlester' });
+    return User.create({ username: 'dylan' });
   })
   .then(function() {
     console.log('Seeded User table');
