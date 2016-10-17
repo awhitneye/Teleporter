@@ -20,13 +20,13 @@ Once the project moves into development, the press release can be used as a touc
   > Teleporter
 
 ## Sub-Heading ##
-  > People curious about Virtual Reality
+  > For people curious about Virtual Reality
 
 ## Summary ##
   > Are you looking to get off the couch without actually getting off the couch? Try Teleporter- be amazed as it surrounds you in random virtual reality desinatons!
 
 ## Problem ##
-  > People are often intimidated by VR, 
+  > People are often intimidated by VR 
 
 ## Solution ##
   > Teleporter is a simple and novel introduction to the technology
