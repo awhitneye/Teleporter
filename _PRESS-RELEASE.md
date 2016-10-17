@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Teleporter
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > People curious about Virtual Reality
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Are you looking to get off the couch without actually getting off the couch? Try Teleporter- be amazed as it surrounds you in random virtual reality desinatons!
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > People are often intimidated by VR, 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Teleporter is a simple and novel introduction to the technology
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "It totally doesnt make you motion sick!"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just log in with a mobile browser and stick it on your face with a Google cardboard or other Head Mounted Display (HMD)
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "Truly magical. There's literally no reason to leave this spot im sitting in ever."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > If youre interested in researching mobile VR technology check out https://aframe.io/
