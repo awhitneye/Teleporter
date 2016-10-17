@@ -23,10 +23,10 @@ Once the project moves into development, the press release can be used as a touc
   > For people curious about Virtual Reality
 
 ## Summary ##
-  > Are you looking to get off the couch without actually getting off the couch? Try Teleporter- be amazed as it surrounds you in random virtual reality desinatons!
+  > Are you looking to get off the couch without actually getting off the couch? Try Teleporter- be amazed as it surrounds you in random virtual reality destinatons!
 
 ## Problem ##
-  > People are often intimidated by VR 
+  > People are often intimidated by VR , or unfamiliar with this fast emerging technology
 
 ## Solution ##
   > Teleporter is a simple and novel introduction to the technology

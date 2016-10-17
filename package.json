@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/dylanlrrb/2016-09-mvp#readme",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.3"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
