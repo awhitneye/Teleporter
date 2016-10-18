@@ -30,9 +30,10 @@ app.post('/login', function(req, res) {
   //in the ejs form, it is the name atribute that determines the key on the body of the request
   User.findOne({where: {username: req.body.username}}).then(function(user) { //make sue youre finding one
     if (bcrypt.compareSync(req.body.password, user.password)) { //if credential is eqivilent
-      res.send('correct');
+      res.redirect('main');//
+      //call create session function in? (same place as check user?) and that function also redirects to main
     } else {
-      res.send('incorrect');
+      es.redirect('login');
     }
   });
 });
@@ -52,6 +53,7 @@ app.post('/signup', function(req, res) {
       var hashPass = bcrypt.hashSync(req.body.password);
       User.create({username: username, password: hashPass}).then(function(users) {
         res.send('user created');
+        //rather than sending anything, call create session which will redirect to main and chek for a session
       });
     }
     //if credential is eqivilent
