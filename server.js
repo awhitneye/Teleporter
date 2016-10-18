@@ -17,35 +17,43 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); //withot this we get a really weird type eror and nothing is in the body object of the request
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs'); //this is requiring the ejs module, can replace with some othe templating library?
-
+///////////////////////////////////////
 app.get('/', function(req, res) {
   res.render('main');
 });
-
+///////////////////////////////////////
 app.get('/login', function(req, res) {
   res.render('login');
 });
 
 app.post('/login', function(req, res) {
   //in the ejs form, it is the name atribute that determines the key on the body of the request
-  User.findOne({where: {username: req.body.username}}).then(function(users) { //make sue youre finding one
-    res.send(users);//if credential is eqivilent
+  User.findOne({where: {username: req.body.username}}).then(function(user) { //make sue youre finding one
+    res.send(user);//if credential is eqivilent
   });
 });
-
+///////////////////////////////////////
 app.get('/signup', function(req, res) {
   res.render('signup');
 });
 
 app.post('/signup', function(req, res) {
+  //check if there is not a user with that username
   //make a new user with hashed password
   var username = req.body.username;
-  var hashPass = bcrypt.hashSync(req.body.password);
-  User.create().then(function(users) {
-    res.send('user created');
+  User.findOne({where: {username: username}}).then(function(user) { //make sue youre finding one
+    if (user) {
+      res.redirect('login');
+    } else {
+      
+      res.send('user does not exist');
+    }
+    //if credential is eqivilent
   });
-});
 
+  
+});
+///////////////////////////////////////
 app.get('/main', function(req, res) {
   res.render('main');
 });
