@@ -45,8 +45,10 @@ app.post('/signup', function(req, res) {
     if (user) {
       res.redirect('login');
     } else {
-      
-      res.send('user does not exist');
+      var hashPass = bcrypt.hashSync(req.body.password);
+      User.create({username: username, password: hashPass}).then(function(users) {
+        res.send('user created');
+      });
     }
     //if credential is eqivilent
   });
