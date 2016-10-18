@@ -27,9 +27,9 @@ app.get('/login', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-  //see if the credentials match
-  User.findOne({username: 'me'}).then(function(users) { //make sue youre finding one
-    res.send(users);
+  //in the ejs form, it is the name atribute that determines the key on the body of the request
+  User.findOne({where: {username: req.body.username}}).then(function(users) { //make sue youre finding one
+    res.send(users);//if credential is eqivilent
   });
 });
 
