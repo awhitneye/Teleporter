@@ -18,6 +18,8 @@
   "homepage": "https://github.com/dylanlrrb/2016-09-mvp#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mysql": "^2.11.1",
     "sequelize": "^3.24.3"
