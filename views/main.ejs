@@ -9,7 +9,7 @@
   <body>
     <a-scene ng-app="teleporter" ng-controller="SkyCtrl">
 
-      <a-sphere id='box' radius='0.75' position="0.25 0 -6" rotation="0 0 0" color="blue">
+      <a-sphere id='box' radius='0.75' position="0.25 0 -6" rotation="0 0 0" color="blue" ng-click='fetchNewImage()'>
       <a-animation attribute="material.color"
                dur="400"
                begin='click'
