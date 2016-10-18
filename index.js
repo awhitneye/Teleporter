@@ -12,7 +12,7 @@ var port = 3000;
   
 //uncomment one or the other depending on if you want the table reset on re running index.js
 
-// app.listen(port, function() {
-//   console.log('MySql listening on ' + port);
-// });
+app.listen(port, function() {
+  console.log('MySql listening on ' + port);
+});
 

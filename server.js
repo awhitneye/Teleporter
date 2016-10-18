@@ -29,7 +29,11 @@ app.get('/login', function(req, res) {
 app.post('/login', function(req, res) {
   //in the ejs form, it is the name atribute that determines the key on the body of the request
   User.findOne({where: {username: req.body.username}}).then(function(user) { //make sue youre finding one
-    res.send(user);//if credential is eqivilent
+    if (bcrypt.compareSync(req.body.password, user.password)) { //if credential is eqivilent
+      res.send('correct');
+    } else {
+      res.send('incorrect');
+    }
   });
 });
 ///////////////////////////////////////
