@@ -14,6 +14,7 @@ var User = sequelize.define('User', {
 });
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); //withot this we get a really weird type eror and nothing is in the body object of the request
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs'); //this is requiring the ejs module, can replace with some othe templating library?
 
@@ -21,12 +22,19 @@ app.get('/', function(req, res) {
   res.render('main');
 });
 
+app.get('/login', function(req, res) {
+  res.render('login');
+});
 
 app.post('/login', function(req, res) {
   //see if the credentials match
-  User.findAll().then(function(users) {
+  User.findOne({username: 'me'}).then(function(users) { //make sue youre finding one
     res.send(users);
   });
+});
+
+app.get('/signup', function(req, res) {
+  res.render('signup');
 });
 
 app.post('/signup', function(req, res) {
@@ -36,6 +44,14 @@ app.post('/signup', function(req, res) {
   User.create().then(function(users) {
     res.send('user created');
   });
+});
+
+app.get('/main', function(req, res) {
+  res.render('main');
+});
+
+app.post('/main', function(req, res) {
+  res.render('main');
 });
 
 module.exports = { 
