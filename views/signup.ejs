@@ -1,18 +1,19 @@
 <link rel="stylesheet" type="text/css" href="../style/styles.css">
-<h2>Sign up</h2>
+<body>
+<h1>Teleporter</h1>
 <form action="/signup" method="post">
-    <div>
-      <label for="username">Username:</label>
-      <input id="username" type="text" name="username">
+  <h2>Sign up</h2>
+    <div class='inputdiv'>
+      <input placeholder='Username' id="username" type="text" name="username" require>
+    </div>
+    <div class='inputdiv'>
+      <input placeholder='Password' id="password" type="password" name="password" require>
     </div>
     <div>
-      <label for="password">Password:</label>
-      <input id="password" type="password" name="password">
-    </div>
-    <div>
-      <input type="submit" value="Sign up">
+      <input class='bttn' type="submit" value="Sign up">
     </div>
 </form>
 <p>
-  <a href="/login">Login to your account &rarr;</a>
-<p>
+  <a href="/login">Login to your account</a>
+</p>
+</body>

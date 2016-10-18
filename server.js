@@ -1,3 +1,4 @@
+//var keys = require('keys');
 var express = require('express');
 var bcrypt = require('bcrypt-nodejs');
 var bodyParser = require('body-parser');
