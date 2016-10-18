@@ -34,6 +34,7 @@ app.post('/login', function(req, res) {
       //call create session function in? (same place as check user?) and that function also redirects to main
     } else {
       es.redirect('login');
+      //freezes up when trying to redirect back to login from login?
     }
   });
 });
@@ -56,7 +57,7 @@ app.post('/signup', function(req, res) {
         //rather than sending anything, call create session which will redirect to main and chek for a session
       });
     }
-    //if credential is eqivilent
+    
   });
 
   
