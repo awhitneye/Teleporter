@@ -8,6 +8,17 @@
   </head>
   <body>
     <a-scene ng-app="teleporter" ng-controller="SkyCtrl">
+
+      <a-sphere id='box' radius='0.75' position="0.25 0 -6" rotation="0 0 0" color="blue">
+      <a-animation attribute="material.color"
+               dur="400"
+               begin='click'
+               direction='alternate'
+               from='blue'
+               to="red"
+               repeat="1"></a-animation>
+      </a-sphere>
+
       <a-sky ng-src='{{trustSrc(equirectangular)}}'></a-sky>
       <a-camera position="0 1.8 0">
         <a-cursor color="#2E3A87"></a-cursor>
