@@ -21,8 +21,12 @@ app.use(session({
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); //withot this we get a really weird type eror and nothing is in the body object of the request
+
+app.use('/', express.static(__dirname));
+app.use('/main', express.static(__dirname));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs'); //this is requiring the ejs module, can replace with some other templating library?
+
 ///////////////////////////////////////
 app.get('/', utils.checkUser, function(req, res) {
   res.render('main');
