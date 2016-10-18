@@ -22,8 +22,8 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); //withot this we get a really weird type eror and nothing is in the body object of the request
 
-app.use('/', express.static(__dirname));
-app.use('/main', express.static(__dirname));// these are super imprtant for letting the ejs script files know where to start thier filepaths when looking for statis assets
+app.use('/', express.static(__dirname));// this is super imprtant for letting the ejs script files know where to start thier filepaths when looking for statis assets
+//you only need the '/' to target the ejs used by all routes
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs'); //this is requiring the ejs module, can replace with some other templating library?
 
