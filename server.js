@@ -6,9 +6,13 @@ var session = require('express-session');
 var utils = require('./middleware/utility.js');
 var app = express(); 
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('teleporterDB', 'root', '123', { 
-  dialect: 'mysql' 
-}); 
+// var sequelize = new Sequelize('teleporterDB', 'root', '123', { 
+//   dialect: 'mysql' 
+// }); 
+
+var sequelize = new Sequelize('teleporterdb', 'postgres', null, {
+  dialect: 'postgres'
+});
 
 var User = sequelize.define('User', {
   username: Sequelize.STRING,
