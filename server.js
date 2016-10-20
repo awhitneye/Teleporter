@@ -11,7 +11,6 @@ var Sequelize = require('sequelize');
 // }); 
 
 var sequelize = new Sequelize('teleporterdb', 'postgres', {
-  host: 45.55.144.130,
   dialect: 'postgres'
 });
 
