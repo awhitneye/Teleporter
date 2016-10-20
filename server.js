@@ -10,7 +10,7 @@ var Sequelize = require('sequelize');
 //   dialect: 'mysql' 
 // }); 
 
-var sequelize = new Sequelize('teleporterdb', 'postgres', null, {
+var sequelize = new Sequelize('teleporterdb', 'postgres', '', {
   dialect: 'postgres'
 });
 
